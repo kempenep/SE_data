@@ -35,13 +35,15 @@ mask.pixops.convert(jim.properties.getDataType())
 jim.np()[jim.np()==0] = np.nan
 
 mask.np()[:] = np.nanmean(jim.np(), axis=0)
+mask.geometry.stackBand(mask)
+mask.np(1)[:] = np.nanstd(jim.np(), axis=0)
 
 #to avoid NaN, replace with 0
 # mask.np()[:] = np.nan_to_num(np.nanmean(jim.np(), axis=0), nan=0)
+# mask.geometry.stackBand(mask)
 # mask.np(1)[:] = np.nan_to_num(np.nanstd(jim.np(), axis=0), nan=0)
 #even better, avoid duplication of data to reduce memory footprint
 # mask.np()[:] = np.nan_to_num(np.nanmean(jim.np(), axis=0), copy = False, nan=0)
+# mask.geometry.stackBand(mask)
 # mask.np(1)[:] = np.nan_to_num(np.nanstd(jim.np(), axis=0), copy = False, nan=0)
 
-mask.geometry.stackBand(mask)
-mask.np(1)[:] = np.nanstd(jim.np(), axis=0)
