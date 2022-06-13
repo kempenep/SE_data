@@ -46,7 +46,7 @@ echo "install mial, jiplib, and pyjeo"
 #
 
 # Env vars for paths, library versions
-ENV INSTALL_HOME=/home/install
+INSTALL_HOME=/home/install
 
 # Prepare compilation directory
 mkdir -p $INSTALL_HOME
