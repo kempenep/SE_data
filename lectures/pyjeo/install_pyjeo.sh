@@ -49,7 +49,7 @@ echo "install mial, jiplib, and pyjeo"
 ENV INSTALL_HOME=/home/install
 
 # Prepare compilation directory
-mkdir $INSTALL_HOME
+mkdir -p $INSTALL_HOME
 
 
 #
@@ -69,7 +69,7 @@ set -xe \
     && rm mial.tar.gz \
     && rm -rf $INSTALL_HOME/jeolib-miallib*
 
-curl -L --output $INSTALL_HOME/jiplib.tar.gz https://github.com/ec-jrc/jeolib-jiplib/archive/refs/tags/1.0.8.tar.gz --verbose
+curl -L --output $INSTALL_HOME/jiplib.tar.gz https://github.com/ec-jrc/jeolib-jiplib/archive/refs/tags/v1.0.8.tar.gz --verbose
 
 # - jiplib
 set -xe \
@@ -87,7 +87,7 @@ set -xe \
     && rm jiplib.tar.gz \
     && rm -rf $INSTALL_HOME/jeolib-jiplib*
 
-curl -L --output $INSTALL_HOME/pyjeo.tar.gz https://github.com/ec-jrc/jeolib-pyjeo/archive/refs/tags/1.0.8.tar.gz --verbose
+curl -L --output $INSTALL_HOME/pyjeo.tar.gz https://github.com/ec-jrc/jeolib-pyjeo/archive/refs/tags/v1.0.8.tar.gz --verbose
 
 # - pyjeo
 cd $INSTALL_HOME \
