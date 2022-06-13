@@ -12,6 +12,7 @@ apt-get install -y  --no-install-recommends \
                       python3 \
                       python3-dev \
                       python3-numpy \
+                      python3-gdal \
                       python3-pip \
                       python3-wheel \
                       python-pip-whl \
@@ -96,24 +97,3 @@ cd $INSTALL_HOME \
     && cd $INSTALL_HOME \
     && rm -rf $INSTALL_HOME/jeolib-pyjeo*
     #&& rm pyjeo.tar.gz
-
-    apt-utils \
-    python3-setuptools \
-    libboost-serialization1.74.0 \
-    ibboost-filesystem1.74.0 \
-    libjsoncpp1 \
-    gsl-bin \
-    libfann2 \
-    fftw3 \
-    libshp2 \
-    gdal-bin \
-    libpython3.9 \
-    python3 \
-    python3-gdal \
-    python3-numpy \
-    python3-wheel \
-    python3-xarray \
-    python3-netcdf4 \
-    python3-pyproj \
-    gzip \
-    tar
